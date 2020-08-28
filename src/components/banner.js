@@ -5,7 +5,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 const Banner = () => {
 	const data = useStaticQuery(graphql`
     query {
-      festival: file(relativePath: { eq: "festival.jpg" }) {
+      headphones: file(relativePath: { eq: "headphones.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid
@@ -21,7 +21,7 @@ const Banner = () => {
 				<div className="row">
 					<div className="main-text">Nick Bansal</div>
 					<div className="main-image">
-						<Img fluid={data.festival.childImageSharp.fluid} />
+						<Img fluid={data.headphones.childImageSharp.fluid} />
 					</div>
 				</div>
 			</div>
