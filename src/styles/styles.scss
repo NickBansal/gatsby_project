@@ -13,14 +13,10 @@ html, body {
 }
 
 .container {
-    width: 1640px;
-    min-width: 1640px;
+    width: 1280px;
+    min-width: 1280px;
     margin: 0 auto;
 
-    @media (max-width: 1440px) {
-        width: 1280px;
-        min-width: 1280px;
-    }
     @media (max-width: 1280px) {
         width: 976px;
         min-width: 976px;
@@ -68,6 +64,45 @@ header {
                     }
                 }
             }
+        }
+    }
+}
+
+// Banner
+
+.banner {
+    display: flex;
+    align-items: center;
+    background: $white;
+    position: relative;
+    height: 100vh;
+
+    .row {
+        position: relative;
+        .main-text {
+            font-size: 4.4rem;
+            text-transform: uppercase;
+            letter-spacing: 42px;
+            font-weight: 700;
+            color: $white;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: center;
+            mix-blend-mode: difference;
+            z-index: 9;
+
+            @media (max-width: 1440px) {
+                font-size: 4.4rem;
+                letter-spacing: 36px;
+            }
+        }
+
+        .main-image {
+            max-width: 1020px;
+            margin: 0 auto;
         }
     }
 }
